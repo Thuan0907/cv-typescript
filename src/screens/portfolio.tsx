@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LeftPart from "../components/LeftPart";
 import Preloader from "../components/Preloader";
 import RightPart from "../components/RightPart";
 import MobileMenu from "../components/mobile/MobileMenu";
 import { FloatButton } from "antd";
-import { BlobOptions } from "buffer";
+import { isMobile } from "react-device-detect";
 
 const Portfolio = () => {
   const [hideLeftPart, setHideLeftPart] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (isMobile) {
+      setHideLeftPart(true);
+    }
+  }, [isMobile]);
 
   return (
     <>

@@ -50,7 +50,7 @@ const About = () => {
                       ></div>
                     </div>
                     <div className="border layer" data-depth="0.6">
-                      <img src="img/about/550x640.jpg" alt="550x640" />
+                      <img src={bgWrap} alt="550x640" />
                       <div className="inner"></div>
                     </div>
                   </div>
