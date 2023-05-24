@@ -8,7 +8,7 @@ const MobileMenu = () => {
 
   const style = {
     overflow: "hidden",
-    height: isOpen ? "block" : "none",
+    display: isOpen ? "block" : "none",
     transition: "2s",
   };
 
