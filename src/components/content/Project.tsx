@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { IoLogoReact } from "react-icons/io5";
 import { BsArrowRight, BsInstagram, BsTwitter } from "react-icons/bs";
 import { DiNodejsSmall } from "react-icons/di";
-import { AiFillFacebook } from "react-icons/ai";
+import { FaPizzaSlice } from "react-icons/fa";
+import { SiPetsathome, SiYourtraveldottv } from "react-icons/si";
 
 interface IProject {
   image: JSX.Element;
@@ -13,9 +14,6 @@ interface IProject {
     description: string;
     frontend: string;
     backend: string;
-    member: number;
-    role: string;
-    demo: string;
     github: string;
   };
 }
@@ -26,59 +24,47 @@ const Project = () => {
 
   const dataProjects: IProject[] = [
     {
+      image: <SiPetsathome size={50} color="#00a80c" />,
+      title: "Pet App",
+      shortDescription: "Pet App",
+      detail: {
+        description: "Pet App",
+        frontend: "Javascript, HTML, CSS, Bootstrap",
+        backend: "",
+        github: "https://github.com/Thuan0907/pet-app.git",
+      },
+    },
+    {
+      image: <SiYourtraveldottv size={50} color="#4096ff" />,
+      title: "Travel",
+      shortDescription: "Travel",
+      detail: {
+        description: "Travel",
+        frontend: "HTML, CSS",
+        backend: "",
+        github: "https://github.com/Thuan0907/travel.git",
+      },
+    },
+    {
       image: <IoLogoReact size={50} color="#2bebfd" />,
       title: "Tiki Clone",
       shortDescription: "Website thương mại điện tử ",
       detail: {
-        description: "Xây dưng website thương mại điện tử clone",
+        description: "Xây dựng website thương mại điện tử clone",
         frontend: "React, Redux Toolkit, Ant Design",
         backend: "Node.JS, MongoDB",
-        member: 1,
-        role: "Developer",
-        demo: "",
-        github: "https://github.com/Thuan0907",
+        github: "https://github.com/Thuan0907/project-clone-tiki.git",
       },
     },
     {
-      image: <DiNodejsSmall size={50} color="#00a80c" />,
-      title: "Bookingcare Clone",
-      shortDescription: "Coming soon",
+      image: <FaPizzaSlice size={50} color="#4096ff" />,
+      title: "Pizza",
+      shortDescription: "Pizza",
       detail: {
-        description: "",
-        frontend: "",
+        description: "Pizza",
+        frontend: "HTML, CSS",
         backend: "",
-        member: 1,
-        role: "",
-        demo: "",
-        github: "",
-      },
-    },
-    {
-      image: <AiFillFacebook size={50} color="#4096ff" />,
-      title: "Facebook Clone",
-      shortDescription: "Coming soon",
-      detail: {
-        description: "",
-        frontend: "",
-        backend: "",
-        member: 1,
-        role: "",
-        demo: "",
-        github: "",
-      },
-    },
-    {
-      image: <BsTwitter size={50} color="#4096ff" />,
-      title: "Twitter Clone",
-      shortDescription: "Coming soon",
-      detail: {
-        description: "",
-        frontend: "",
-        backend: "",
-        member: 1,
-        role: "",
-        demo: "",
-        github: "",
+        github: "https://github.com/Thuan0907/pizza.git",
       },
     },
     {
@@ -89,9 +75,6 @@ const Project = () => {
         description: "",
         frontend: "",
         backend: "",
-        member: 1,
-        role: "",
-        demo: "",
         github: "",
       },
     },
@@ -119,14 +102,6 @@ const Project = () => {
             <li>Miêu tả: {dataDetail.detail.description}</li>
             <li>Frontend: {dataDetail.detail.frontend}</li>
             <li>Backend: {dataDetail.detail.backend}</li>
-            <li>Số lượng thành viên dự án: {dataDetail.detail.member}</li>
-            <li>Vai trò: {dataDetail.detail.role}</li>
-            <li>
-              Demo:{" "}
-              <a href={dataDetail.detail.demo} target="_blank">
-                {dataDetail.detail.demo}
-              </a>
-            </li>
             <li>
               Github:{" "}
               <a href={dataDetail.detail.github} target="_blank">
