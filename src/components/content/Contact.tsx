@@ -41,6 +41,14 @@ const Contact = () => {
                         </span>
                       </p>
                     </li>
+                    <li>
+                      <p>
+                        <label>Phone:</label>
+                        <span>
+                          <a>0796058902</a>
+                        </span>
+                      </p>
+                    </li>
                   </ul>
                 </div>
               </div>
